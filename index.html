@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Cartographie 3D des logements locatifs sociaux français</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="BECKREL (Charles-Henri ARNOULD)" />
+    <meta name="description" content="Cartographie 3D des logements locatifs sociaux français [RPLS géolocalisé 2019]" />
+    <meta name=" robots" content="index,nofollow" />
+    <meta property="og:title" content="Cartographie 3D des logements locatifs sociaux français" />
+    <meta property="og:url" content="https://beckrel.github.io/rpls-3d/" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/beckrel/rpls-3d/main/assets/social-preview.jpg" />
+    <meta property="og:description" content="Cartographie 3D des logements locatifs sociaux français [source : RPLS géolocalisé 2019]" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;600;700&display=swap" rel="stylesheet" />
+    <!-- Privacy-first analytics (GDPR compliant) -->
+    <script defer data-domain="beckrel.github.io" src="https://plausible.io/js/plausible.js"></script>
+    <style>
+      html,
+      body {
+        font-family: 'Public Sans', sans-serif;
+        margin: 0;
+        padding: 0;
+        width: 99.9vw;
+        height: 99.9vh;
+      }
+
+      /* Map Title */
+
+      .heading {
+        position: absolute;
+        top: 17px;
+        left: 17px;
+        padding: 15px;
+        border-radius: 6px;
+        background: #f1dca7eb;
+        color: black;
+      }
+
+      .heading__title {
+        font-size: 18px;
+        font-weight: 600;
+        margin: 0;
+        padding: 0;
+      }
+
+      .heading__subtitle {
+        font-size: 13px;
+        font-weight: 600;
+        margin: 2px 0 0 0;
+        padding: 0;
+      }
+
+      .heading__small {
+        display: inline-block;
+        font-size: 12px;
+        margin: 8px 0 0 0;
+        text-decoration: none;
+        border-bottom: 1px dashed black;
+        color: black;
+        padding: 0;
+      }
+
+      .heading__tiny {
+        font-size: 9px;
+        margin: 10px 0 0 0;
+        padding: 0;
+      }
+
+      /* BECKREL popup */
+
+      .popup {
+        position: absolute;
+        top: 170px;
+        left: 17px;
+        background: white;
+        padding: 15px;
+        border-radius: 4px;
+        box-shadow: blue 0px 0px 20px 0px;
+        border: 2px solid blue;
+        font-weight: 300;
+        color: blue;
+        font-size: 13px;
+        line-height: 19px;
+      }
+
+      .popup__close {
+        position: absolute;
+        top: 8px;
+        right: 15px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .popup > p {
+        margin: 0;
+        padding: 0;
+      }
+
+      .popup > p > a {
+        display: inline-block;
+        padding-top: 4px;
+        color: blue;
+        font-weight: 700;
+        text-decoration: none;
+        border-bottom: 2px solid rgba(0, 0, 255, 0.4);
+      }
+
+      /* Spinner */
+
+      .spinner {
+        z-index: -9999;
+        position: absolute;
+        top: 60%;
+        left: calc(50% - 15px);
+        border: 4px solid rgb(233, 233, 233);
+        border-top: 4px solid black;
+        border-radius: 30px;
+        width: 30px;
+        height: 30px;
+        animation: spin 1.25s ease infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+    <script>
+      function hide() {
+        document.getElementById('popup').style.display = 'none'
+      }
+    </script>
+  </head>
+  <body>
+    <div class="heading">
+      <p class="heading__title">La France des logements sociaux</p>
+      <p class="heading__subtitle">sur la base du RPLS géolocalisé 2019</p>
+      <a class="heading__small" href="https://github.com/beckrel/rpls-3d#readme" target="_blank">Code-source, données et retraitements</a>
+      <p class="heading__tiny">Copyright © 2022 Beckrel</p>
+    </div>
+
+    <div class="popup" id="popup">
+      <p class="popup__close" onclick="hide()">✕</p>
+      <p>
+        Bailleurs sociaux,<br />
+        Supervisez les logements à relouer en temps réel<br />
+        Programmez visites et visite-conseil à la Doctolib<br />
+        <a target="_blank" href="https://www.beckrel.com?utm_source=gh">Pilotez la relocation avec BECKREL →</a>
+      </p>
+    </div>
+
+    <div class="spinner"></div>
+
+    <iframe
+      width="100%"
+      height="100%"
+      src="https://api.mapbox.com/styles/v1/charnould/cl2buotxj00a314nzqyczy4q1.html?title=false&access_token=pk.eyJ1IjoiY2hhcm5vdWxkIiwiYSI6ImNsMmJzcGhzcTBlcGczY25jb3NkdTM5Y3IifQ.khc1wKkcVLBHLzMRIKZPkQ&zoomwheel=false#12.86/48.84522/2.33119/0/66"
+      title="rpls-3d"
+      style="border: none"
+    ></iframe>
+  </body>
+</html>

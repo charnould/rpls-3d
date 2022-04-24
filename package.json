@@ -1,0 +1,30 @@
+{
+  "―――――――――――――――――": "",
+  "| GENERAL STUFF |": "",
+  "—————————————————": "",
+  "name": "rpls-3d",
+  "version": "1.0.0",
+  "author": "BECKREL - Charles-Henri Arnould",
+  "homepage": "https://github.com/beckrel/rpls-3d",
+  "scripts": {
+    "format": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beckrel/rpls-3d.git"
+  },
+  "――――――――――――――――――――": "",
+  "| DEV DEPENDENCIES |": "",
+  "————————————————————": "",
+  "devDependencies": {
+    "prettier": "^2.6.2"
+  },
+  "―――――――――――――――――――": "",
+  "| PRETTIER CONFIG |": "",
+  "———————————————————": "",
+  "prettier": {
+    "printWidth": 180,
+    "semi": false,
+    "singleQuote": true
+  }
+}
