@@ -46,4 +46,4 @@ Chaque `feature` représente un `hexbin` (polygone) avec 2 propriétés :
 ## Licence
 
 Le code-source est sous licence `MIT`, le contenu et les illustrations sous licence `CC BY SA 4.0`.  
-Copyright © 2022 BECKREL, Charles-Henri ARNOULD — contact@beckrel.com
+Copyright © 2022 [BECKREL](https://www.linkedin.com/company/beckrel), [Charles-Henri ARNOULD](https://www.linkedin.com/in/charnould/) — contact@beckrel.com
