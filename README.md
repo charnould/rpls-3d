@@ -1,6 +1,6 @@
 # La France des logements sociaux (3D)
 
-➤ [Visualiser la carte](https://beckrel.github.io/rpls-3d/) · La hauteur des hexagones (`hexbin`) matérialise la surface habitable cumulée.
+➤ [Visualiser la carte](https://charnould.github.io/rpls-3d/) · La hauteur des hexagones (`hexbin`) matérialise la surface habitable cumulée.
 
 ![Visualisation des surfaces contenues dans le RPLS](assets/header.png)
 
